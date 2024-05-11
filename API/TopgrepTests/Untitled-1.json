@@ -1,0 +1,97 @@
+{
+    "job_position": "test_job",
+    "descr": "awefull",
+    "qualification": [
+        "any degree"
+    ],
+    "responsibility": [
+        "none"
+    ],
+    "required_skills": [
+        {
+            "id": "V4X7qsY1ZxxNkG2wuYL7Q",
+            "tag_name": "API"
+        }
+    ],
+    "questionnaire": null,
+    "quiz": [],
+    "live_assessment": [],
+    "job_details": {
+        "location": "kolkata",
+        "type": "Part-Time",
+        "experience": [
+            0,
+            3
+        ]
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[
+    {
+        "id": "OZuMaqvVNF_eSuPjWjNOm",
+        "posted_date": "2024-04-19 11:54:54",
+        "modified_date": "2024-04-19 11:54:54",
+        "hm_id": "01aaef77-a8da-4421-8469-6959ee0d9721",
+        "status": "active",
+        "job_position": "test_job",
+        "descr": "awefull",
+        "qualification": "any degree",
+        "responsibility": " testing the application",
+        "required_skills": "{\"id\":\"V4X7qsY1ZxxNkG2wuYL7Q\",\"tag_name\":\"API\"}])",
+        "job_details": "{\"location\":\"kolkata\",\"type\":\"Part-Time\",\"experience\":[0,3]}",
+        "questionnaire": null,
+        "quiz": null,
+        "live_assessment": null
+    }
+]
+
+
+
+
+[
+    {
+        "id": "cuSvidh130AoN7FrB5UYg",
+        "posted_date": "2024-04-03 07:09:54",
+        "modified_date": "2024-04-03 07:09:54",
+        "hm_id": "01aaef77-a8da-4421-8469-6959ee0d9721",
+        "status": "active",
+        "job_position": "Quality Assurance Engineer",
+        "descr": "We are seeking a skilled Quality Assurance Engineer to join our software development team. The QA Engineer will be responsible for ensuring the quality and reliability of our software products through rigorous testing and analysis. This role requires strong attention to detail, excellent problem-solving skills, and the ability to collaborate effectively with cross-functional teams.",
+        "qualification": "[\"Bachelor's degree in Computer Science, Engineering, or related field.\"]",
+        "responsibility": "[\"Collaborate with developers and product managers to resolve issues and improve product quality.\"]",
+        "required_skills": "[{\"id\":\"Mm0yDEA__fVs70xaeQEgB\",\"tag_name\":\"Python\"}]",
+        "job_details": "{\"type\":\"Contract\",\"location\":\"Bengaluru\",\"experience\":[0,2]}",
+        "questionnaire": null,
+        "quiz": null,
+        "live_assessment": null
+    }
+]
+
+
+

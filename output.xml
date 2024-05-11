@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-04-22T16:05:22.622947" rpa="false" schemaversion="5">
+<suite id="s1" name="scholarjobAPI" source="C:\Users\User\OneDrive\Desktop\API_Robot\API\TopgrepTests\scholarjobAPI.robot">
+<test id="s1-t1" name="TC1_Login_Post Request Demo" line="14">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-04-22T16:05:23.106854" level="INFO">Creating Session using : alias=Session, url=https://qa-api.topgrep.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>Session</arg>
+<arg>${base_url}</arg>
+<arg>disable_warnings=1</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-04-22T16:05:23.106854" elapsed="0.000963"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-22T16:05:23.108848" level="INFO">${endpoint} = /api/auth</msg>
+<var>${endpoint}</var>
+<arg>/api/auth</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-22T16:05:23.108848" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-04-22T16:05:23.109844" level="INFO">${body} = {'email': 'mahendraqa@getnada.com', 'password': 'mahendraqa@getnada.coM'}</msg>
+<var>${body}</var>
+<arg>email=mahendraqa@getnada.com</arg>
+<arg>password=mahendraqa@getnada.coM</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-04-22T16:05:23.108848" elapsed="0.000996"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2024-04-22T16:05:23.840920" level="INFO">POST Request : url=https://qa-api.topgrep.com/api/auth 
+ path_url=/api/auth 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '64', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=email=mahendraqa%40getnada.com&amp;password=mahendraqa%40getnada.coM 
+ </msg>
+<msg time="2024-04-22T16:05:23.840920" level="INFO">POST Response : url=https://qa-api.topgrep.com/api/auth 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Mon, 22 Apr 2024 10:35:22 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '737', 'Connection': 'keep-alive', 'Content-Security-Policy': "default-src 'self';connect-src 'self' https://api.stripe.com https://undefined.s3..amazonaws.com;frame-src 'self' https://js.stripe.com https://hooks.stripe.com;child-src 'self' https://js.stripe.com;script-src 'self' https://js.stripe.com;style-src 'self' https://fonts.googleapis.com https://js.stripe.com;font-src 'self' https://fonts.gstatic.com;img-src 'self' https://*.stripe.com https://undefined.s3..amazonaws.com data: blob:;base-uri 'self';form-action 'self';frame-ancestors 'self';object-src 'none';script-src-attr 'none';upgrade-insecure-requests", 'Cross-Origin-Opener-Policy': 'same-origin', 'Cross-Origin-Resource-Policy': 'same-origin', 'Origin-Agent-Cluster': '?1', 'Referrer-Policy': 'no-referrer', 'Strict-Transport-Security': 'max-age=15552000; includeSubDomains', 'X-Content-Type-Options': 'nosniff', 'X-DNS-Prefetch-Control': 'off', 'X-Download-Options': 'noopen', 'X-Frame-Options': 'SAMEORIGIN', 'X-Permitted-Cross-Domain-Policies': 'none', 'X-XSS-Protection': '0', 'Vary': 'Origin', 'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '49', 'X-RateLimit-Reset': '1713782369', 'ETag': 'W/"2e1-78s43Uh5wX2E3XyRQjgoNQDWQyI"'} 
+ body={"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiIwZWU3ZDc0Yy04YTgzLTQyM2UtYjEzZi1lYzFkOGU1YmJjODAiLCJ1c2VySWQiOiI5YjVhZmMwOC1kNGE5LTQwYjUtYmQ0Yy03NjNiZmU0MTFiM2EiLCJwZXJtaXNzaW9uIjoic2Nob2xhciIsInByb3ZpZGVyIjoiYXBwIiwiaWF0IjoxNzEzNzgyMTIyLCJleHAiOjE3MTQzODY5MjJ9.iihaa2LEQJeCWsp2fNLkO8vPmWtscH5SmpXRKMKUeSg","first_name":"mahendra","last_name":"G","subscription":"active","plan":"free","permission":"scholar","name":"robot_auto","accounts":[{"id":"0ee7d74c-8a83-423e-b13f-ec1d8e5bbc80","name":"My Account","permission":"scholar","org_logo":null,"enable_hiring":1}],"account_id":"0ee7d74c-8a83-423e-b13f-ec1d8e5bbc80","has_password":true,"onboarded":1,"verified":1,"lms_enabled":false,"is_org_logo_upload_required":false} 
+ </msg>
+<msg time="2024-04-22T16:05:23.840920" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>Session</arg>
+<arg>${endpoint}</arg>
+<arg>data=${body}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-04-22T16:05:23.109844" elapsed="0.731076"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-22T16:05:23.840920" level="INFO">${json_response} = {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiIwZWU3ZDc0Yy04YTgzLTQyM2UtYjEzZi1lYzFkOGU1YmJjODAiLCJ1c2VySWQiOiI5YjVhZmMwOC1kNGE5LTQwYjUtYmQ0Yy03NjNiZmU0MTFiM2EiLCJwZXJtaXNzaW9uIjoi...</msg>
+<var>${json_response}</var>
+<arg>json.loads('''${response.content}''')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-22T16:05:23.840920" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-22T16:05:23.840920" level="INFO">${token} = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiIwZWU3ZDc0Yy04YTgzLTQyM2UtYjEzZi1lYzFkOGU1YmJjODAiLCJ1c2VySWQiOiI5YjVhZmMwOC1kNGE5LTQwYjUtYmQ0Yy03NjNiZmU0MTFiM2EiLCJwZXJtaXNzaW9uIjoic2No...</msg>
+<var>${token}</var>
+<arg>Bearer ${json_response['token']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-22T16:05:23.840920" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-04-22T16:05:23.840920" level="INFO">${token} = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiIwZWU3ZDc0Yy04YTgzLTQyM2UtYjEzZi1lYzFkOGU1YmJjODAiLCJ1c2VySWQiOiI5YjVhZmMwOC1kNGE5LTQwYjUtYmQ0Yy03NjNiZmU0MTFiM2EiLCJwZXJtaXNzaW9uIjoic2No...</msg>
+<arg>${token}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-04-22T16:05:23.840920" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-22T16:05:23.840920" elapsed="0.014949"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>TOKEN:${token}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-22T16:05:23.856401" elapsed="0.004359"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-04-22T16:05:23.864586" level="INFO">${status_code} = 200</msg>
+<var>${status_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-04-22T16:05:23.862592" elapsed="0.001994"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${status_code}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-22T16:05:23.865587" elapsed="0.000995"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-04-22T16:05:23.870373" level="INFO">${response_body} = {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiIwZWU3ZDc0Yy04YTgzLTQyM2UtYjEzZi1lYzFkOGU1YmJjODAiLCJ1c2VySWQiOiI5YjVhZmMwOC1kNGE5LTQwYjUtYmQ0Yy03NjNiZmU0MTFiM2EiLCJwZXJtaXNzaW9uIjoic...</msg>
+<var>${response_body}</var>
+<arg>${response.content}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-04-22T16:05:23.867579" elapsed="0.002794"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${response_body}</arg>
+<arg>true</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-04-22T16:05:23.870373" elapsed="0.000000"/>
+</kw>
+<tag>1</tag>
+<tag>Post</tag>
+<status status="PASS" start="2024-04-22T16:05:23.093432" elapsed="0.779375"/>
+</test>
+<test id="s1-t2" name="TC3_Job_Profile_Get Demo" line="54">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-04-22T16:05:23.876797" level="INFO">Creating Session using : alias=mysession, url=https://qa-api.topgrep.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mysession</arg>
+<arg>${base_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-04-22T16:05:23.876797" elapsed="0.001000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-22T16:05:23.878825" level="INFO">${endpoint} = /api/hiring/profile</msg>
+<var>${endpoint}</var>
+<arg>/api/hiring/profile</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-22T16:05:23.877797" elapsed="0.001028"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-04-22T16:05:23.879786" level="INFO">${headers} = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiIwZWU3ZDc0Yy04YTgzLTQyM2UtYjEzZi1lYzFkOGU1YmJjODAiLCJ1c2VySWQiOiI5YjVhZmMwOC1kNGE5LTQwYjUtYmQ0Yy03NjNiZmU0MTFiM2EiLCJwZ...</msg>
+<var>${headers}</var>
+<arg>Authorization</arg>
+<arg>${token}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-04-22T16:05:23.879786" elapsed="0.000000"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-04-22T16:05:24.101652" level="INFO">GET Request : url=https://qa-api.topgrep.com/api/hiring/profile 
+ path_url=/api/hiring/profile 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiIwZWU3ZDc0Yy04YTgzLTQyM2UtYjEzZi1lYzFkOGU1YmJjODAiLCJ1c2VySWQiOiI5YjVhZmMwOC1kNGE5LTQwYjUtYmQ0Yy03NjNiZmU0MTFiM2EiLCJwZXJtaXNzaW9uIjoic2Nob2xhciIsInByb3ZpZGVyIjoiYXBwIiwiaWF0IjoxNzEzNzgyMTIyLCJleHAiOjE3MTQzODY5MjJ9.iihaa2LEQJeCWsp2fNLkO8vPmWtscH5SmpXRKMKUeSg'} 
+ body=None 
+ </msg>
+<msg time="2024-04-22T16:05:24.101652" level="INFO">GET Response : url=https://qa-api.topgrep.com/api/hiring/profile 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Mon, 22 Apr 2024 10:35:22 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '4130', 'Connection': 'keep-alive', 'Content-Security-Policy': "default-src 'self';connect-src 'self' https://api.stripe.com https://undefined.s3..amazonaws.com;frame-src 'self' https://js.stripe.com https://hooks.stripe.com;child-src 'self' https://js.stripe.com;script-src 'self' https://js.stripe.com;style-src 'self' https://fonts.googleapis.com https://js.stripe.com;font-src 'self' https://fonts.gstatic.com;img-src 'self' https://*.stripe.com https://undefined.s3..amazonaws.com data: blob:;base-uri 'self';form-action 'self';frame-ancestors 'self';object-src 'none';script-src-attr 'none';upgrade-insecure-requests", 'Cross-Origin-Opener-Policy': 'same-origin', 'Cross-Origin-Resource-Policy': 'same-origin', 'Origin-Agent-Cluster': '?1', 'Referrer-Policy': 'no-referrer', 'Strict-Transport-Security': 'max-age=15552000; includeSubDomains', 'X-Content-Type-Options': 'nosniff', 'X-DNS-Prefetch-Control': 'off', 'X-Download-Options': 'noopen', 'X-Frame-Options': 'SAMEORIGIN', 'X-Permitted-Cross-Domain-Policies': 'none', 'X-XSS-Protection': '0', 'Vary': 'Origin', 'X-RateLimit-Limit': '100000', 'X-RateLimit-Remaining': '99973', 'X-RateLimit-Reset': '1713785068', 'ETag': 'W/"1022-B7FQ5v8DeJNDgU2TJ+WQc37As3g"'} 
+ body={"data":{"candidate_id":"9b5afc08-d4a9-40b5-bd4c-763bfe411b3a","email":"test@gmail.com","dob":"12-12-2001","first_name":"MahendraG","last_name":"Shaivaewe","description":" With over 8 years of experience in SQL development, I excel in database management and data analysis.","phone_number":"9743553284","profile_picture":"9b5afc08-d4a9-40b5-bd4c-763bfe411b3a.png","skills":[{"id":"xtynGpCE6bDPCNLJKbrl_","tag_name":"Agile"},{"id":"u12tjfACx6oMJT2R82g4I","tag_name":"Apex"},{"id":"NGstZPd4tElfwr-AkCltO","tag_name":"Assembly"}],"strengths":"Hardworking","created_at":"2024-04-17T04:48:02.000Z","modified_at":"2024-04-22T10:27:49.000Z","location":"Bengaluru","projects":"Outstanding organizational, time management, planning, and problem-solving skills. Met all project deadlines for 5 years straight and increased Company","state":"Karnataka","high_school_name":"JNVH","high_school_board":"CBSE","high_school_end_year":"2021","high_school_percentage":"87","high_school_start_year":"2019","degree_name":"BE","degree_end_year":"2024","degree_percentage":"76","degree_start_year":"2022","degree_university":"VTU","tags":[{"id":"MEhs64mpgZktwo7EJjF0L","tag_name":"Ada"},{"id":"xtynGpCE6bDPCNLJKbrl_","tag_name":"Agile"},{"id":"P-YQleSPqMbSC_ixFQVDp","tag_name":"Algorithms"},{"id":"u12tjfACx6oMJT2R82g4I","tag_name":"Apex"},{"id":"V4X7qsY1ZxxNkG2wuYL7Q","tag_name":"API"},{"id":"NGstZPd4tElfwr-AkCltO","tag_name":"Assembly"},{"id":"HrMvvOpc6h5StDazT7-wN","tag_name":"Automation"},{"id":"JUwvi7FVT07wDfeTtklee","tag_name":"Bash"},{"id":"w20yOouQBd7PanraK-Jny","tag_name":"C"},{"id":"9xGse-0Lo1FBxV4XUIPU0","tag_name":"C#"},{"id":"MamGOfFsLdH_y3sc-N63W","tag_name":"C++"},{"id":"q5UH9Q0vN83B88Ryl5mHG","tag_name":"COBOL"},{"id":"qiLLJFizAL7om6UHizqIX","tag_name":"CSS"},{"id":"opz-82q9s9VY9U0s-E0GN","tag_name":"Dart"},{"id":"B23y9SlPIeSjceatbvBDM","tag_name":"Data Structures"},{"id":"hCEKmUdikmGeozO3BCi6Y","tag_name":"Deployment"},{"id":"LgtRg4AjF1oCsuUaYiZTY","tag_name":"DevOps"},{"id":"HhZyfWHuwiRYYQJZijJf-","tag_name":"Discrete Mathematics"},{"id":"vmYDiU8vse5M7jOmWcu2d","tag_name":"Erlang"},{"id":"Gf0wfD8W4MP1i4DEGu7hs","tag_name":"Fortran"},{"id":"4oqutHUR6Mtf996N_Vqlr","tag_name":"Git"},{"id":"P1HyLR0L0dNVxUvuL4RFN","tag_name":"GitHub"},{"id":"0oqFkr_AXf6Kxy3KOmvN_","tag_name":"Go"},{"id":"xkPQkdkX7F5RL7v0kF1AQ","tag_name":"GraphQL"},{"id":"Xyo01-VqulLC0JJR_gnUA","tag_name":"Groovy"},{"id":"SA7VxXUI5ONhqS4XXyxGn","tag_name":"Haskell"},{"id":"WgDh63XmZkuajatNIYQm7","tag_name":"HTML"},{"id":"X5nh-ZOIUeiG43cZ8RgiT","tag_name":"Java"},{"id":"BjjzgL5LKILQo4YShviqu","tag_name":"JavaScript"},{"id":"5Gxw_a4IKsYQhq7KRC0Nk","tag_name":"Jenkins"},{"id":"EHotq2n3RoWGghXroeBZl","tag_name":"JSON"},{"id":"SDMjKZSKNOoCBq46MYT4p","tag_name":"Kotlin"},{"id":"CnOEOa2uSRSmGXtvQXr47","tag_name":"Linux"},{"id":"_fgxcFmW5aOBMCkAGGiuf","tag_name":"Lua"},{"id":"vxaDxo_k4GRfEjtgwHAmz","tag_name":"Matlab"},{"id":"8BC121IMrsQVOKU3DUDon","tag_name":"Objective C"},{"id":"Iv6A85bvVQPAKu1NOK4cp","tag_name":"OCaml"},{"id":"xIrt3zdgvs-Mti_M-aD6y","tag_name":"Perl"},{"id":"CsS2pkgFOR-8O-rogekjD","tag_name":"PHP"},{"id":"qPRZbN9Gj5DhxpVuUqb9a","tag_name":"PL I"},{"id":"KMh_Z9tW_hun3hutuRhkY","tag_name":"Playwright"},{"id":"-oJUCQ-KBF_KZKPwyQJIM","tag_name":"Postman"},{"id":"V_Wb9LKqzX9R6DAf-itua","tag_name":"Powershell"},{"id":"uK6OyvupmnxdcvIFUty5a","tag_name":"Prolog"},{"id":"Mm0yDEA__fVs70xaeQEgB","tag_name":"Python"},{"id":"kbze3BarnLyDzQ-38aWvR","tag_name":"R"},{"id":"_DivsJTUHMDSUSNvYx643","tag_name":"Regex"},{"id":"FdV9ql7t-LwHsg9ZFri96","tag_name":"Rust"},{"id":"J4Sq37pStF7ljKtA-gqLb","tag_name":"Scala"},{"id":"B7MUeYykWimQUykc9Mscp","tag_name":"Scheme"},{"id":"SA9n8Cc201We_Dc1_WEMC","tag_name":"Selenium"},{"id":"PU3IIfut1E-hU90LZW4C9","tag_name":"Shell Scripting"},{"id":"3g5fq7RXAbAjyzIC_-La5","tag_name":"Swift"},{"id":"Y3CXH0kE2BxAXcZgH4-P0","tag_name":"TypeScript"},{"id":"couNdAnN5ZiMDrmDOfjwk","tag_name":"Verilog"},{"id":"BK_eKPdhkzxrXAwpgKcmC","tag_name":"VHDL"},{"id":"W9VtmRPW31rZGkUgopyEZ","tag_name":"Visual Basic"},{"id":"I7PpjPhzvSb5LP_8kHd40","tag_name":"XML"}],"verified_tags":[],"createProfile":false}} 
+ </msg>
+<msg time="2024-04-22T16:05:24.101652" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>${endpoint}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-04-22T16:05:23.880786" elapsed="0.220866"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-22T16:05:24.101652" elapsed="0.044001"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-04-22T16:05:24.149626" level="INFO">${status_code} = 200</msg>
+<var>${status_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-04-22T16:05:24.146650" elapsed="0.002976"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${status_code}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-22T16:05:24.149626" elapsed="0.000000"/>
+</kw>
+<tag>1</tag>
+<tag>jobs</tag>
+<status status="PASS" start="2024-04-22T16:05:23.875799" elapsed="0.281417"/>
+</test>
+<test id="s1-t3" name="Patch Request Demo" line="67">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-04-22T16:05:24.157216" level="INFO">Creating Session using : alias=Session1, url=https://qa-api.topgrep.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>Session1</arg>
+<arg>${base_url}</arg>
+<arg>disable_warnings=1</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-04-22T16:05:24.157216" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-22T16:05:24.157216" level="INFO">${endpoint} = /api/hiring/profile</msg>
+<var>${endpoint}</var>
+<arg>/api/hiring/profile</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-22T16:05:24.157216" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-04-22T16:05:24.157216" level="INFO">${headers} = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiIwZWU3ZDc0Yy04YTgzLTQyM2UtYjEzZi1lYzFkOGU1YmJjODAiLCJ1c2VySWQiOiI5YjVhZmMwOC1kNGE5LTQwYjUtYmQ0Yy03NjNiZmU0MTFiM2EiLCJwZ...</msg>
+<var>${headers}</var>
+<arg>Authorization</arg>
+<arg>${token}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-04-22T16:05:24.157216" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-04-22T16:05:24.157216" level="INFO">${body} = {'last_name': 'Shaiva'}</msg>
+<var>${body}</var>
+<arg>last_name=Shaiva</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-04-22T16:05:24.157216" elapsed="0.000000"/>
+</kw>
+<kw name="PATCH On Session" owner="RequestsLibrary">
+<msg time="2024-04-22T16:05:24.390600" level="INFO">PATCH Request : url=https://qa-api.topgrep.com/api/hiring/profile 
+ path_url=/api/hiring/profile 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiIwZWU3ZDc0Yy04YTgzLTQyM2UtYjEzZi1lYzFkOGU1YmJjODAiLCJ1c2VySWQiOiI5YjVhZmMwOC1kNGE5LTQwYjUtYmQ0Yy03NjNiZmU0MTFiM2EiLCJwZXJtaXNzaW9uIjoic2Nob2xhciIsInByb3ZpZGVyIjoiYXBwIiwiaWF0IjoxNzEzNzgyMTIyLCJleHAiOjE3MTQzODY5MjJ9.iihaa2LEQJeCWsp2fNLkO8vPmWtscH5SmpXRKMKUeSg', 'Content-Length': '16', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=last_name=Shaiva 
+ </msg>
+<msg time="2024-04-22T16:05:24.390600" level="INFO">PATCH Response : url=https://qa-api.topgrep.com/api/hiring/profile 
+ status=500, reason=Internal Server Error 
+ headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Mon, 22 Apr 2024 10:35:23 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '38', 'Connection': 'keep-alive', 'Content-Security-Policy': "default-src 'self';connect-src 'self' https://api.stripe.com https://undefined.s3..amazonaws.com;frame-src 'self' https://js.stripe.com https://hooks.stripe.com;child-src 'self' https://js.stripe.com;script-src 'self' https://js.stripe.com;style-src 'self' https://fonts.googleapis.com https://js.stripe.com;font-src 'self' https://fonts.gstatic.com;img-src 'self' https://*.stripe.com https://undefined.s3..amazonaws.com data: blob:;base-uri 'self';form-action 'self';frame-ancestors 'self';object-src 'none';script-src-attr 'none';upgrade-insecure-requests", 'Cross-Origin-Opener-Policy': 'same-origin', 'Cross-Origin-Resource-Policy': 'same-origin', 'Origin-Agent-Cluster': '?1', 'Referrer-Policy': 'no-referrer', 'Strict-Transport-Security': 'max-age=15552000; includeSubDomains', 'X-Content-Type-Options': 'nosniff', 'X-DNS-Prefetch-Control': 'off', 'X-Download-Options': 'noopen', 'X-Frame-Options': 'SAMEORIGIN', 'X-Permitted-Cross-Domain-Policies': 'none', 'X-XSS-Protection': '0', 'Vary': 'Origin', 'X-RateLimit-Limit': '100000', 'X-RateLimit-Remaining': '99972', 'X-RateLimit-Reset': '1713785068', 'ETag': 'W/"26-GI4maY+bi4TpgHIpEexZPfLXIww"'} 
+ body={"message":"Failed to update profile"} 
+ </msg>
+<msg time="2024-04-22T16:05:24.390600" level="FAIL">HTTPError: 500 Server Error: Internal Server Error for url: https://qa-api.topgrep.com/api/hiring/profile</msg>
+<var>${response}</var>
+<arg>Session1</arg>
+<arg>${endpoint}</arg>
+<arg>data=${body}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a PATCH request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2024-04-22T16:05:24.157216" elapsed="0.249004">HTTPError: 500 Server Error: Internal Server Error for url: https://qa-api.topgrep.com/api/hiring/profile</status>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-04-22T16:05:24.406757" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-04-22T16:05:24.406757" elapsed="0.000000"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<var>${status_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="NOT RUN" start="2024-04-22T16:05:24.406757" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${status_code}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2024-04-22T16:05:24.406757" elapsed="0.000000"/>
+</kw>
+<tag>1</tag>
+<tag>Demo</tag>
+<status status="FAIL" start="2024-04-22T16:05:24.157216" elapsed="0.249541">HTTPError: 500 Server Error: Internal Server Error for url: https://qa-api.topgrep.com/api/hiring/profile</status>
+</test>
+<status status="FAIL" start="2024-04-22T16:05:22.638605" elapsed="1.787955"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="1" skip="0">1</stat>
+<stat pass="0" fail="1" skip="0">Demo</stat>
+<stat pass="1" fail="0" skip="0">jobs</stat>
+<stat pass="1" fail="0" skip="0">Post</stat>
+</tag>
+<suite>
+<stat pass="2" fail="1" skip="0" id="s1" name="scholarjobAPI">scholarjobAPI</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

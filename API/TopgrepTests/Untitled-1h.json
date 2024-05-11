@@ -1,0 +1,65 @@
+[
+    {
+        "id": "OZuMaqvVNF_eSuPjWjNOm",
+        "posted_date": "2024-04-19 11:54:54",
+        "modified_date": "2024-04-19 11:54:54",
+        "hm_id": "01aaef77-a8da-4421-8469-6959ee0d9721",
+        "status": "active",
+        "job_position": "test_job",
+        "descr": "awefull",
+        "qualification": "any degree",
+        "responsibility": " testing the application",
+        "required_skills": "json.dumps([{\"id\":\"V4X7qsY1ZxxNkG2wuYL7Q\",\"tag_name\":\"API\"}])",
+        "job_details": "{\"location\":\"kolkata\",\"type\":\"Part-Time\",\"experience\":[0,3]}",
+        "questionnaire": "null",
+        "quiz": "null",
+        "live_assessment": "null"
+    }
+]
+
+
+[
+    {
+        "id": "cuSvidh130AoN7FrB5UYg",
+        "posted_date": "2024-04-03 07:09:54",
+        "modified_date": "2024-04-03 07:09:54",
+        "hm_id": "01aaef77-a8da-4421-8469-6959ee0d9721",
+        "status": "active",
+        "job_position": "Quality Assurance Engineer",
+        "descr": "We are seeking a skilled Quality Assurance Engineer to join our software development team. The QA Engineer will be responsible for ensuring the quality and reliability of our software products through rigorous testing and analysis. This role requires strong attention to detail, excellent problem-solving skills, and the ability to collaborate effectively with cross-functional teams.",
+        "qualification": "[\"Bachelor's degree in Computer Science, Engineering, or related field.\"]",
+        "responsibility": "[\"Collaborate with developers and product managers to resolve issues and improve product quality.\"]",
+        "required_skills": "[{\"id\":\"Mm0yDEA__fVs70xaeQEgB\",\"tag_name\":\"Python\"}]",
+        "job_details": "{\"type\":\"Contract\",\"location\":\"Bengaluru\",\"experience\":[0,2]}",
+        "questionnaire": null,
+        "quiz": null,
+        "live_assessment": null
+    }
+]
+
+
+
+qualification
+responsibility
+
+skills
+job details 
+quewstionaries
+quiz
+live assesment
+
+@list
+
+qualification
+responsibility
+required skills
+&{Dict}
+
+
+Create Dictionary
+...    job_position="Software Engineer III"
+...    descr="Looking for a skilled software engineer to join our team."
+...    qualification=${["Proven experience in designing and executing comprehensive test plans, with a strong understanding of testing methodologies and industry best practices.","Proficiency in both manual and automated testing, demonstrating the ability to develop and implement automated test scripts to enhance efficiency and coverage.","Strong analytical skills to identify and document software defects, track issues to resolution, and contribute to the continuous improvement of testing processes.","Excellent communication skills to collaborate effectively with cross-functional teams, providing clear and concise feedback to developers and stakeholders"]}
+...    responsibility=${["Develop and maintain software applications","Collaborate with cross-functional teams"]}
+...    required_skills=${[{"id":"Mm0yDEA__fVs70xaeQEgB","tag_name":"Python"},{"id":"CnOEOa2uSRSmGXtvQXr47","tag_name":"Linux"},{"id":"HrMvvOpc6h5StDazT7-wN","tag_name":"Automation"},{"id":"SA9n8Cc201We_Dc1_WEMC","tag_name":"Selenium"},{"id":"X5nh-ZOIUeiG43cZ8RgiT","tag_name":"Java"}]}
+...    job_details=${{"location": "kolkata", "type": "Part-Time", "experience": [0, 3]}}
